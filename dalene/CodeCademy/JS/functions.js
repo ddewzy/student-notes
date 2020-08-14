@@ -52,3 +52,22 @@ const plantNeedsWater = (day) => {
 };
 
 const plantNeedsWater = (day) => (day === "Wednesday" ? true : false);
+
+const canIVote = (age) => {
+  if (age >= 18) {
+    return true;
+  } else {
+    age < 18;
+    return false;
+  }
+};
+console.log(canIVote(19)); // Should print true
+
+const agreeOrDisagree = (agree, disagree) => {
+  if (agree === disagree) {
+    return "You agree!";
+  } else {
+    return "You disagree!";
+  }
+};
+console.log(agreeOrDisagree("yep", "yep"));
