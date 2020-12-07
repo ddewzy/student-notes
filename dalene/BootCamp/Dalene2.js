@@ -63,9 +63,17 @@ function callback(obj, i, arr1) {
 console.log(map(objArray1, callback));
 
 //Write a function that will take in a string and returns a nickname function that will apply that string as a nickname to someone’s name.
-const myName = "Dalene";
-let nicknameGenerator = () => {
-  let nickname = "The Great";
-  return myName + " " + nickname;
+let nicknameGenerator = (nickname) => (personName) => {
+  const names = personName.split(" ");
+  return `${names[0]} "${nickname}" ${names[1]}`;
 };
-console.log(nicknameGenerator());
+const nickname = nicknameGenerator("coolness");
+const result = nickname("Dalene Dews");
+console.log(result);
+
+// const myName = "Dalene";
+// let nicknameGenerator = () => {
+//   let nickname = "The Great";
+//   return myName + " " + nickname;
+// };
+// console.log(nicknameGenerator());
