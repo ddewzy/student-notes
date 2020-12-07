@@ -2,7 +2,7 @@
 //merge two arrays
 const merge = (first, second) => {
   const result = [];
-
+  //this is where we start at each point in the array
   let firstIndex = 0;
   let secondIndex = 0;
 
@@ -23,7 +23,7 @@ const merge = (first, second) => {
 
 // const result = merge(firstArr, secondArr);
 // console.log(result);
-
+//split and sort then put back together
 const mergeSort = (arr) => {
   if (arr.length <= 1) return arr; //base case
   const midPoint = Math.ceil(arr.length / 2); //split arr in half
