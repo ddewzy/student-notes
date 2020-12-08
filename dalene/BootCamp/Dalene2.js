@@ -39,12 +39,14 @@ for (let i = 0; i <= objArray.length - 1; i++) {
 console.table(objArray);
 
 //Rewrite the map function. That is, write a function that will call a callback function on each item in an array passing the current array element, the index, and the array to the callback.
-function map(arr, callback) {
-  let transformed = [];
+function myMap(arr, callback) {
+  let newArray = [];
+  //let newArray = new newArray(); same as above
   for (let i = 0; i < arr.length; i++) {
-    transformed[i] = callback(arr[i], i, arr);
+    newArray[i] = callback(arr[i], i, arr);
+    //newArray.push(callback(arr[i], i, arr)); same as above
   }
-  return;
+  return newArray;
 }
 
 //Now, using that map function, swap the properties myProp1 and myProp2 on each object in an array where the property doSwap is true OR it is the last item in the array.
@@ -54,13 +56,14 @@ const objArray1 = [
   { myProp1: 3, myProp2: 33 },
   { myProp1: 4, myProp2: 44, doSwap: true },
 ];
-function callback(obj, i, arr1) {
-  if (obj.doSwap === true) {
-    return swap(obj);
+function mySwap(obj, i, arr1) {
+  if (obj.doSwap || i === arr1.length - 1) {
+    const temp = obj.myProp1;
+    obj.myProp1 = obj.myProp2;
+    obj.myProp2 = obj.myProp1;
   }
-  return obj;
 }
-console.log(map(objArray1, callback));
+myMap(someArr, mySwap);
 
 //Write a function that will take in a string and returns a nickname function that will apply that string as a nickname to someone’s name.
 let nicknameGenerator = (nickname) => (personName) => {
