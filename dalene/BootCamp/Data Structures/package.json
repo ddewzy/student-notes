@@ -1,0 +1,27 @@
+{
+  "name": "node-basics",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "nodeBasics.js",
+  "scripts": {
+    "debug": "node --nolazy isPalindrome.js",
+    "test": "jest"
+  },
+  "author": "Dalene Dews",
+  "license": "ISC",
+  "dependencies": {
+    "babel-jest": "^26.6.3",
+    "express": "^4.17.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/parser": "^7.12.10",
+    "@babel/plugin-proposal-private-methods": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/traverse": "^7.12.12",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "jest": "^26.6.3"
+  }
+}
