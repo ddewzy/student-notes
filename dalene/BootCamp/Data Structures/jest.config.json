@@ -1,0 +1,8 @@
+{
+  "testPathIgnorePatterns": ["node_modules"],
+  "transform": {
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.mjs$": "babel-jest"
+  },
+  "collectCoverage": true
+}
